@@ -2,6 +2,7 @@ package it.unimol.spring.menu;
 
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Repository;
+import org.springframework.validation.annotation.Validated;
 
 import java.util.ArrayList;
 import java.util.List;
