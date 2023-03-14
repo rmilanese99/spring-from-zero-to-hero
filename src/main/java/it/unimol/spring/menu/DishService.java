@@ -17,10 +17,10 @@ public class DishService {
     }
 
     public List<Dish> getAll() {
-        return this.dishes.getAll();
+        return (List<Dish>) this.dishes.findAll();
     }
 
     public Dish put(@Valid Dish dish) {
-        return this.dishes.put(dish);
+        return this.dishes.save(dish);
     }
 }
