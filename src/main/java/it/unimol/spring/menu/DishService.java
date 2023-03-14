@@ -2,10 +2,12 @@ package it.unimol.spring.menu;
 
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Service;
+import org.springframework.validation.annotation.Validated;
 
 import java.util.List;
 
 @Service
+@Validated
 public class DishService {
 
     private final IDishRepository dishes;

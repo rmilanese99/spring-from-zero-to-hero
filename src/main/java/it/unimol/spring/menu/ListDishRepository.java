@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
+@Validated
 public class ListDishRepository implements IDishRepository {
 
     private final List<Dish> dishes = new ArrayList<>();
