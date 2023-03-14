@@ -1,5 +1,9 @@
 package it.unimol.spring.menu;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
@@ -9,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
+@Entity
 public class Dish {
 
     enum Course {
@@ -18,6 +23,10 @@ public class Dish {
     enum Allergen {
         GLUTEN, LACTOSE, NUTS, FISH, SHELLFISH, EGG, SOY, SESAME
     }
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @NotBlank(message = "Il nome del piatto non può essere vuoto")
     private String name;
