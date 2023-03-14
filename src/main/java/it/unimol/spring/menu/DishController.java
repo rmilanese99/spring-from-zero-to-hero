@@ -1,5 +1,6 @@
 package it.unimol.spring.menu;
 
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,7 +21,7 @@ public class DishController {
     }
 
     @PostMapping("/")
-    public Dish put(@RequestBody Dish dish) {
+    public Dish put(@Valid @RequestBody Dish dish) {
         return this.service.put(dish);
     }
 }
